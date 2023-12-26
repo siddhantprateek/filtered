@@ -1,4 +1,4 @@
-import ProtectedRoute from '../context/protected.route';
+// import ProtectedRoute from '../context/protected.route';
 
 export default function Page() {
   return (
