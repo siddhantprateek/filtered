@@ -1,40 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Filtered.
 
-## Getting Started
+![](./assets/preview.png)
 
-First, run the development server:
+## Tech Stack
+
+- `Next.Js`
+- `Typescript`
+- `Firebase`
+- `Newsapi` - [Link](https://newsapi.org)
+
+## Setting up locally
+
+- Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/siddhantprateek/filtered.git
+  cd filtered # Navigate to the Project Directory
+```
+**Install Dependencies**
+
+```bash
+  npm install 
+  # or
+  bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Set Up Firebase environment variable**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Create a new project on the [Firebase Console](https://console.firebase.google.com/).
+- In the project settings, find and copy the configuration values for the web app.
+- Create a `.env.local` file in the project root and add the following:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY=your-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-auth-domain.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-storage-bucket.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your-measurement-id
+NEXT_PUBLIC_NEWS_APIKEY= # Set Up News API Key
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+**Run the Development Server:**
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+   npm run dev
+  #  or if you're using Yarn:
+  yarn dev
+   #  or if you're using Bun:
+  bun run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Open in Browser:**
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000) in your web browser to view the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Author 
+[Siddhant Prateek Mahanayak](https://github.com/siddhantprateek)
