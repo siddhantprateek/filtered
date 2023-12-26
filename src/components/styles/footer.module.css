@@ -1,0 +1,28 @@
+.footer_outer {
+  padding: .5rem 1rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.4rem;
+  background-color: rgba(250, 235, 215, 0.567);
+  border-radius: 10px;
+}
+
+.footer_right ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer_right li {
+  margin-left: 4rem;
+  font-weight: 100;
+  cursor: pointer;
+  color: rgba(128, 128, 128, 0.431);
+  transition: all .2s;
+}
+
+.footer_right li:hover {
+  color: rgb(128, 128, 128);
+}

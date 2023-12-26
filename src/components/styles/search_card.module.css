@@ -1,0 +1,27 @@
+.search_card_container {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 1px solid rgba(166, 166, 166, 0.342);
+}
+
+
+.central_content {
+  width: 30rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.central_content h2 {
+  cursor: pointer;
+}
+
+.article_thumbnail {
+  height: 12rem;
+  width: 18rem;
+  filter: grayscale(80%);
+  cursor: pointer;
+}

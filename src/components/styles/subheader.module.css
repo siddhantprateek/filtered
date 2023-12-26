@@ -1,0 +1,21 @@
+.sub_header {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.sub_header_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid black;
+}
+
+.sub_header span {
+  margin-right: 1rem;
+}
+
+.sub_header h2 {
+  font-size: 4rem;
+  font-style: italic;
+}
+

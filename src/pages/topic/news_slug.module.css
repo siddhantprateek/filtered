@@ -1,0 +1,29 @@
+.section_header {
+  margin: 2rem 0;
+}
+ 
+
+.show_more_button_section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  border-top: 1px solid rgba(145, 145, 145, 0.241);
+  padding: 1rem 0;
+}
+
+.show_more_button_section button {
+  padding: 1rem 2rem;
+  border-radius: 0;
+  background-color: black;
+  outline: none;
+  border: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transform: all .2s;
+  cursor: pointer;
+}
+
+.show_more_button_section button:hover {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
