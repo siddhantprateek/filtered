@@ -36,6 +36,7 @@ const removeFavorite = async (id) => {
   try {
     await deleteDoc(doc(db, "favorites", id));
     console.log("Document successfully deleted!");
+    return "deleted"
   }catch(err){
     console.error("Error deleting document: ", err);
   }

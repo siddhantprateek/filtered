@@ -51,8 +51,10 @@ const SearchedCard = (props) => {
       await addFavorite(dataValue)
     }else {
       if(props.id) {
-        await removeFavorite(props.id)
-        window.location.reload()
+       const response =  await removeFavorite(props.id)
+       if(response === "deleted") {
+         window.location.reload()
+       }
       }
     }
 
