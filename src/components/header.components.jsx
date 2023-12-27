@@ -28,6 +28,9 @@ const Header = () => {
     router.push('/')
   }
 
+  const handleProfile = () => {
+    router.push('/profile')
+  }
   return (
     <div className={styles.header}>
       <div className={styles.header_top}>
@@ -54,6 +57,9 @@ const Header = () => {
                 <button className={styles.login_btn} onClick={logOut}>
                   Sign Out
                 </button>
+                <picture  onClick={() => handleProfile()}>
+                  <img style={{ height: '2rem', marginLeft: "1rem", cursor: 'pointer'}} src={"https://img.icons8.com/ios/100/user-male-circle--v1.png"} alt="user-male-circle--v1"/>
+                </picture>
               </>
           }
 
