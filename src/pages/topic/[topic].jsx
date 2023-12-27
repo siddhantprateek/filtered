@@ -23,7 +23,6 @@ export const getStaticProps = async (context) => {
 }
 
 export default function Page({ data }) {
-  // const [data, setData] = useState<[] | any>();
   const [showMore, setShowmore] = useState(10);
   const router = useRouter()
 
@@ -32,9 +31,9 @@ export default function Page({ data }) {
     <div style={{ padding: '0 2rem' }}>
       <div className={styles.section_header}>
         <h1>Filtered Section: {router.query.topic}</h1>
-        <p>{data?.articles.length !== 0 ? `${data?.totalResults}` : '0'} Search results.</p>
+        <p>{ data.status === "ok" ? `${data?.totalResults}` : '0'} Search results.</p>
       </div>
-      {data?.articles.slice(0, showMore).map((article, index) => (
+      { data.status === "ok" && data?.articles.slice(0, showMore).map((article, index) => (
         <>
           <SearchedCard
             author={article.author}
