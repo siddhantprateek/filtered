@@ -1,11 +1,12 @@
 import {  getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { app } from '../firebase';
-import { INewsArticle } from "@/app/types/types";
 
 export const db = getFirestore(app);
 
 const addFavorite = async (props) => {
   try {
+
+    console.log(props)
     const docRef = await addDoc(collection(db, "favorites"), {
       ...props
     })
@@ -20,7 +21,10 @@ const getAllFavorite = async () => {
     const docs = await getDocs(collection(db, "favorites"));
     const favorites = [];
     docs.forEach((doc) => {
-      favorites.push(doc.data());
+      favorites.push({
+        id: doc.id,
+        article: doc.data()
+      });
     });
     return favorites;
   }catch(err){
