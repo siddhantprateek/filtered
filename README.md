@@ -54,6 +54,20 @@ NEXT_PUBLIC_NEWS_APIKEY= # Set Up News API Key
   bun run dev
 ```
 
+## MockUps
+
+- Sign In with Google Account
+
+![](./assets/signin.png)
+
+- Grid View of Home Page
+
+![](./assets/home.png)
+
+- Search Any Topics
+
+![](./assets/search.png)
+
 
 **Open in Browser:**
 
