@@ -8,7 +8,8 @@
 - `Typescript`
 - `Firebase`
 - `Newsapi` - [Link](https://newsapi.org)
-
+- `Kubernetes`
+- `Github Actions`
 ## Setting up locally
 
 - Clone the Repository
@@ -53,6 +54,9 @@ NEXT_PUBLIC_NEWS_APIKEY= # Set Up News API Key
    #  or if you're using Bun:
   bun run dev
 ```
+**Open in Browser**
+
+Open [http://localhost:3000](http://localhost:3000) in your web browser to view the application.
 
 ## MockUps
 
@@ -68,10 +72,35 @@ NEXT_PUBLIC_NEWS_APIKEY= # Set Up News API Key
 
 ![](./assets/search.png)
 
+## DevOps Workflow
 
-**Open in Browser:**
+| All Kubernetes manifest files are present in `kubernetes` directory.
 
-Open [http://localhost:3000](http://localhost:3000) in your web browser to view the application.
+- To run the app on local machine using kubernetes
+- Install minikube  and start it by running `minikube start`.
+- Apply all the deployment and service resources using command `kubectl apply -f ./kubernetes/`
+
+```bash
+$ kubectl get all
+
+NAME                                READY   STATUS    RESTARTS   AGE
+pod/filtered-web-85c495bfbd-27frq   1/1     Running   0          30m
+pod/filtered-web-85c495bfbd-4zslm   1/1     Running   0          30m
+
+NAME                   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+service/filtered-svc   NodePort    10.110.45.153   <none>        3000:32478/TCP   43m
+service/kubernetes     ClusterIP   10.96.0.1       <none>        443/TCP          185d
+
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/filtered-web   2/2     2            2           30m
+
+NAME                                      DESIRED   CURRENT   READY   AGE
+replicaset.apps/filtered-web-85c495bfbd   2         2         2       30m
+```
+
+- The `filtered-web` deployment has a desired state of 2 replicas, which matches the current state (2 pods running).
+- `filtered-svc` is a NodePort service, exposing `filtered-web` deployment at`port `3000` internally in the cluster and mapping it to port `32478` externally.
+
 
 
 
