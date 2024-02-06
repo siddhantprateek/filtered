@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  NEXT_PUBLIC_FIREBASE_API_KEY: AIzaSyCiIXA1H_AU7sRIQDD5JcOBYvynid9m32c
+  NEXT_PUBLIC_FIREBASE_APP_ID: 1:67917237882:web:fb5ae4a94ed5c2401cb5c3
+  NEXT_PUBLIC_NEWS_APIKEY: 1f5c02f2db064cb186a65c2fd9291609
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: filtered-config
