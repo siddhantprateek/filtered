@@ -22,8 +22,8 @@ const NewsCardView = (props) => {
           {props.content}
         </p>
       }
-        
       </div>
+      
       <div>
         {props.size === 'main' ?
           <h1 className={styles.main_title}>
