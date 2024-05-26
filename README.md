@@ -10,6 +10,11 @@
 - `Newsapi` - [Link](https://newsapi.org)
 - `Kubernetes`
 - `Github Actions`
+
+## Preview
+
+![](./assets/filteredv2.gif)
+  
 ## Setting up locally
 
 - Clone the Repository
